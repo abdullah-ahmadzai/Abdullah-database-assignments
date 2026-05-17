@@ -1,0 +1,43 @@
+    declare
+    a number;
+    b number;
+    op char(1);
+    result number;
+    begin
+    a := &first_number;
+    op := '&operator';
+    b := &second_number;
+   if op = '+' then
+   result := a+b;
+   elsif op = '-' then
+   result := a-b;
+   elsif op = '*' then
+   result := a*b;
+   elsif op = '/' then
+   if b!= 0 then
+   result := a/b;
+   else
+   dbms_output.put_line('Error: Division by zero');
+   return;
+   end if;
+   else
+   dbms_output.put_line('invalid operator');
+   return;
+   end if;
+   dbms_output.put_line('Result =' || result);
+  end;
+   /
+Enter value for first_number: 10
+old   7: a := &first_number;
+new   7: a := 10;
+Enter value for operator: +
+old   8: op := '&operator';
+new   8: op := '+';
+Enter value for second_number: 10
+old   9: b := &second_number;
+new   9: b := 10;
+Result =20
+
+PL/SQL procedure successfully completed.
+
+SQL> /

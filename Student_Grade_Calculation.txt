@@ -1,0 +1,49 @@
+ declare
+    marks number;
+    grade char(1);
+    begin
+    marks := &Enter_Marks;
+    if marks >= 90 then
+    grade := 'A';
+   if marks >= 60 then
+    grade := 'B';
+   if marks >= 40 then
+   grade := 'C';
+   else
+   grade := 'F';
+   end if;
+   dbms_output.put_line('Grade :' || grade);
+   end;
+   /
+Enter value for enter_marks: 2
+old   5: marks := &Enter_Marks;
+new   5: marks := 2;
+end;
+   *
+ERROR at line 16:
+ORA-06550: line 16, column 4:
+PLS-00103: Encountered the symbol ";" when expecting one of the following:
+if
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  declare
+  2  marks number;
+  3  grade char(1);
+  4  begin
+  5  marks := &Enter_Marks;
+  6  if marks >= 90 then
+  7  grade := 'A';
+  8  elsif marks >= 60 then
+  9  grade := 'B';
+ 10  elsif marks >= 40 then
+ 11  grade := 'C';
+ 12  else
+ 13  grade := 'F';
+ 14  end if;
+ 15  dbms_output.put_line('Grade :' || grade);
+ 16* end;
+SQL> /
+

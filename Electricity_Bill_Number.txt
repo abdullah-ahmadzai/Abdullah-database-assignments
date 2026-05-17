@@ -1,0 +1,15 @@
+ declare
+    units number;
+   bill number;
+    begin
+    units := &Enter_Units;
+    if units <= 50 then
+    bill := units * 3;
+    elsif units <= 100 then
+    bill := (50 * 3) + ((units - 50) * 5);
+   else
+   bill := (50 * 3) + (50 * 5) + ((units - 100) * 8);
+   end if;
+   dbms_output.put_line('Total Bill (AFN):' || bill);
+  end;
+  /

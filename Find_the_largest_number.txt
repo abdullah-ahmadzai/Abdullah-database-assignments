@@ -1,0 +1,21 @@
+
+    declare
+    a number;
+    b number;
+    c number;
+    largest number;
+    begin
+    a := &firstnumber;
+    b := &secondnumber;
+    c := &thirdnumber;
+   if a >= b and a >= c then
+          largest := a;
+   elsif b >= a and b >= c then
+          largest := b;
+   else
+          largest := c;
+   end if;
+   dbms_output.put_line('largest number is:' || largest);
+  end;
+  /
+.

@@ -1,0 +1,9 @@
+  declare
+    total number := 0;
+    begin
+    for i in 1..100 loop
+    total := total + i;
+    end loop;
+    dbms_output.put_line('sum(1to 100) =' || total);
+   end;
+SQL> /

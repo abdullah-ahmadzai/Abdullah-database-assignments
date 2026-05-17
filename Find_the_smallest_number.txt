@@ -1,0 +1,20 @@
+  declare
+    a number;
+    b number;
+    c number;
+    smallest number;
+    begin
+    a := &firstnumber;
+    b := &secondnumber;
+    c := &thirdnumber;
+   if a <= b and a <= c then
+          smallest := a;
+   elsif b <= a and b <= c then
+          smallest := b;
+   else
+          smallest := c;
+   end if;
+   dbms_output.put_line('smallest number is:' || smallest);
+  end;
+   /
+

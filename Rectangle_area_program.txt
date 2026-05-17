@@ -1,0 +1,11 @@
+  declare
+    v_length number;
+    v_width number;
+    v_area number;
+    begin
+    v_length := &Enter_Length;
+   v_width := &Enter_width;
+    v_area := v_length * v_width;
+    DBMS_OUTPUT.PUT_LINE('Rectangle area =' || v_area);
+  END;
+   /

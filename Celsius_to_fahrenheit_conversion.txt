@@ -1,0 +1,11 @@
+
+ set serveroutput on;
+ declare
+    celsius number;
+    fahrenheit number;
+    begin
+    celsius := &Enter_Celsius;
+    fahrenheit := (celsius * 9/5) +32;
+    dbms_output.put_line('fahrenheit :=' || fahrenheit);
+    end;
+     /

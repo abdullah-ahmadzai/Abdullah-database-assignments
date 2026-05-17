@@ -1,0 +1,9 @@
+   declare
+    v_side number;
+    v_area number;
+    begin
+    v_side := &Enter_side;
+    v_area := v_side * v_side;
+    dbms_output.put_line('square area :=' || v_area);
+   end;
+   /
